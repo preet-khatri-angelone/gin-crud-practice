@@ -14,7 +14,7 @@ func init() {
 
 func main() {
 
-	if ok := db.Connect(); !ok {
+	if check := db.Connect(); !check {
 		log.Fatal("error in connecting to DB")
 	}
 	defer db.DB.Close()
